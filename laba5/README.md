@@ -16,3 +16,6 @@ python main.py --load data/random.json --window 5
 
 #экспорт сгенерированного ряда в csv
 python main.py --kind trend --n 30 --export out.csv
+
+### Замер производительности скользящей средней и вариант 9.
+Для сравнения реализации SMA через список через список и через "deque" используйте флаг '--benchmark--', а для генерации ряда варианта 9 - '--kind squared'.

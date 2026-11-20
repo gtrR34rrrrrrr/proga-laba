@@ -37,6 +37,16 @@ def random_series(
     return [rng.uniform(low, high) for _ in range(n)]
 
 
+def squared_random_series(
+    n: int = 3000,
+    seed: Optional[int] = None,
+) -> List[float]:
+    """Ряд из n чисел вида random.random() ** 2 (Вариант 9)."""
+    _validate_n(n)
+    rng = random.Random(seed)
+    return [rng.random() ** 2 for _ in range(n)]
+
+
 def sine_series(
     n: int,
     amplitude: float = 1.0,
