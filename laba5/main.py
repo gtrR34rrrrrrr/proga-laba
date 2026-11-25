@@ -173,7 +173,7 @@ def main() -> None:
         print(f"  EMA         [len={len(ema)}]: первые 5 -> {[round(x, 4) for x in ema[:5]]}")
 
         if window == n:
-            print(f"  [Краевой кейс k == n]: SMA выродилась в одно число = {sma_list:.6f}")
+            print(f"  [Краевой кейс k == n]: SMA выродилась в одно число = {sma_list[0]:.6f}")
 
         if window % 2 == 1:
             cma = centered_moving_average(data, window)
